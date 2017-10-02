@@ -1,19 +1,14 @@
 const app = "I don't do much."
 
-function Sandwich(bread, ingredients, cut) {
+function Sandwich(bread, ingredients, name) {
   this.bread = bread;
   this.ingredients = ingredients;
-  this.cut = cut;
+  this.name = name;
 }
-
-var pbj = {
-  bread: "white",
-  ingredients: ["peanut butter", "jelly"],
-  cut: "triangles",
-  name: "peanut butter and jelly",
-  serve: function() {
-    console.log("here's your " + this.name + ", enjoy!");
-  }
+ 
+function serve() {
+  console.log("here's your " + this.name + ", enjoy!");
 }
-
-pbj.serve();
+ 
+var gc = new Sandwich("white", ["cheese"], "Grilled Cheese");
+var pbj = new Sandwich("wheat", ["peanut butter", "raspberry jam"], "Peanut Butter & Jelly");
